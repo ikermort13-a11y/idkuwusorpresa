@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  background: linear-gradient(180deg, #fff9fb 0%, #ffe4ee 100%);
+
+  font-family: "Trebuchet MS", sans-serif;
+
+  color: #6d4c5c;
+
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "♡ ♡ ♡";
+
+  position: fixed;
+
+  top: 20px;
+  left: 20px;
+
+  font-size: 2rem;
+
+  color: rgba(255, 123, 171, 0.15);
+
+  pointer-events: none;
+}
+
+body::after {
+  content: "♡ ♡ ♡";
+
+  position: fixed;
+
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 2rem;
+
+  color: rgba(255, 123, 171, 0.15);
+
+  pointer-events: none;
+}
+
+#final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+#Boton {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 12px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+#Boton:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+#Boton:active {
+  transform: scale(0.95);
+}
+
+#Titulo {
+  text-align: center;
+
+  padding-top: 50px;
+
+  margin-bottom: 40px;
+}
+
+#Titulo h1 {
+  font-size: 3rem;
+
+  color: #ff6fa7;
+
+  animation: glow 3s ease-in-out infinite;
+}
+
+#Titulo h3 {
+  margin-top: 10px;
+
+  color: #a36f84;
+
+  font-weight: normal;
+
+  font-style: italic;
+
+  letter-spacing: 1px;
+}
+
+#CartaContainer {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 20px;
+}
+
+#Carta {
+  width: min(800px, 90vw);
+
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.97),
+    rgba(255, 250, 252, 0.97)
+  );
+
+  border-radius: 25px;
+
+  padding: 80px;
+
+  border: 3px solid #ffd6e5;
+
+  position: relative;
+
+  overflow: visible;
+
+  box-shadow:
+    0 15px 40px rgba(255, 182, 193, 0.3),
+    0 0 60px rgba(255, 192, 203, 0.15),
+    inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#Carta:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 50px rgba(255, 182, 193, 0.35),
+    0 0 80px rgba(255, 192, 203, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#Carta::before {
+  content: "❤";
+
+  position: absolute;
+
+  top: 20px;
+  right: 30px;
+
+  font-size: 2rem;
+
+  opacity: 0.4;
+
+  color: #ff7bab;
+}
+
+#Carta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  background-image: url("./Fotos/JuntosFoto.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  right: -56px;
+  bottom: -50px;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+#Carta:hover::after {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+#Carta p {
+  margin: 0;
+
+  font-size: 1.8rem;
+
+  line-height: 1.9;
+
+  color: #b35f82;
+
+  text-align: left;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  letter-spacing: 1.2px;
+
+  font-weight: 600;
+
+  text-shadow:
+    2px 2px 4px rgba(255, 182, 193, 0.35),
+    0 0 12px rgba(255, 192, 203, 0.2);
+
+  filter: saturate(1.1);
+}
+
+#Carta p::first-letter {
+  font-size: 3.5rem;
+
+  font-weight: bold;
+
+  color: #ff6fa7;
+
+  line-height: 1;
+
+  text-shadow: 0 0 15px rgba(255, 111, 167, 0.4);
+}
+
+#final {
+  text-align: center;
+
+  max-width: 900px;
+
+  margin: 60px auto;
+
+  padding: 30px;
+}
+
+#final p {
+  font-size: 1.2rem;
+
+  color: #8f5f72;
+}
+
+input {
+  border: 2px solid #ffc8dc;
+
+  border-radius: 15px;
+
+  padding: 12px 20px;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #ff87b7;
+
+  box-shadow: 0 0 15px rgba(255, 135, 183, 0.3);
+}
+
+button {
+  margin-left: 10px;
+
+  border: none;
+
+  background: #ff8fbd;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+
+  background: #ff74ad;
+}
+
+img {
+  user-select: none;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 111, 167, 0.2);
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px rgba(255, 111, 167, 0.5),
+      0 0 40px rgba(255, 182, 193, 0.3);
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgba(255, 111, 167, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  #Titulo h1 {
+    font-size: 2rem;
+  }
+
+  #Titulo h3 {
+    font-size: 1rem;
+  }
+
+  #Carta {
+    padding: 40px;
+  }
+
+  #Carta p {
+    font-size: 1.15rem;
+  }
+
+  #Carta p::first-letter {
+    font-size: 2.5rem;
+  }
+}
