@@ -1,2 +1,0 @@
-# idkuwusorpresa
-aaaaaaaaaaaaa
